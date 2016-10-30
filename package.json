@@ -46,7 +46,10 @@
   ],
   "scripts": {
     "lint": "eslint . --fix",
-    "test": "mocha"
+    "test": "mocha",
+    "upgrade": "npm-check -u",
+    "bump": "bump --prompt --tag --push --all",
+    "release": "npm run upgrade && npm test && npm run bump && npm publish"
   },
   "license": "MIT",
   "repository": {
@@ -57,7 +60,9 @@
     "babel-eslint": "^7.1.0",
     "chai": "^3.5.0",
     "eslint": "^3.2.2",
-    "mocha": "^3.1.2"
+    "mocha": "^3.1.2",
+    "npm-check": "^5.4.0",
+    "version-bump-prompt": "^1.7.2"
   },
   "peerDependencies": {
     "eslint": ">=3.0.0"
