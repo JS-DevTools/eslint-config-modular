@@ -1,0 +1,65 @@
+{
+  "name": "eslint-config-modular",
+  "version": "1.0.0",
+  "description": "Modular ESLint configuration",
+  "keywords": [
+    "eslintconfig",
+    "eslint",
+    "check",
+    "checker",
+    "code",
+    "code checker",
+    "code linter",
+    "code standards",
+    "code style",
+    "enforce",
+    "hint",
+    "jscs",
+    "jshint",
+    "lint",
+    "policy",
+    "quality",
+    "simple",
+    "standard",
+    "standard style",
+    "style",
+    "style checker",
+    "style linter",
+    "verify"
+  ],
+  "author": {
+    "name": "James Messinger",
+    "url": "http://jamesmessinger.com"
+  },
+  "homepage": "https://github.com/BigstickCarpet/eslint-config-modular",
+  "main": "index.js",
+  "files": [
+    "best-practices.js",
+    "browser.js",
+    "es5.js",
+    "es6.js",
+    "index.js",
+    "jsx.js",
+    "node.js",
+    "style.js",
+    "test.js"
+  ],
+  "scripts": {
+    "lint": "eslint . --fix",
+    "test": "mocha"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BigstickCarpet/eslint-config-modular.git"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.1.0",
+    "chai": "^3.5.0",
+    "eslint": "^3.2.2",
+    "mocha": "^3.1.2"
+  },
+  "peerDependencies": {
+    "eslint": ">=3.0.0"
+  }
+}
