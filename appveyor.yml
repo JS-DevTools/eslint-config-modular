@@ -24,6 +24,7 @@ test_script:
   - npm --version
 
   # run tests
+  - npm run lint
   - npm test
 
 # Don't run MSBuild
