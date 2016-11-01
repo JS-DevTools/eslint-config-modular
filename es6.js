@@ -38,6 +38,14 @@ module.exports = {
     // require method and property shorthand syntax for object literals
     'object-shorthand': 'warn',
 
+    // Use arrow functions instead of anonymous functions for callbacks
+    'prefer-arrow-callback': [
+      'error',
+      {
+        allowNamedFunctions: true,     // unless the function is named
+      }
+    ],
+
     // disallow generator functions that do not have yield
     'require-yield': 'error',
   }
