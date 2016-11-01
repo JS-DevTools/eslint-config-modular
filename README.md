@@ -60,7 +60,7 @@ This module configures ESLint to parse EcmaScript 5 code. It also disables ES6-s
 This module configures ESLint to parse EcmaScript 6 (and newer) code. It also contains ES6-specific rules, such as [not assigning to constants](http://eslint.org/docs/rules/no-const-assign), [calling `super()` in constructors](http://eslint.org/docs/rules/no-this-before-super), and [using `let` instead of `var`](http://eslint.org/docs/rules/no-var).
 
 ### `modular/jsx` <small>[(source)](./jsx.js)</small>
-This module contains rules for [JSX](https://facebook.github.io/react/docs/jsx-in-depth.html) codebases, such as enforcing the use of [double-quotes in JSX attributes](http://eslint.org/docs/rules/jsx-quotes).
+This module configures ESLint to parse [JSX syntax](https://facebook.github.io/react/docs/jsx-in-depth.html). It also contains JSX-specific rules, such as enforcing the use of [double-quotes in JSX attributes](http://eslint.org/docs/rules/jsx-quotes).
 
 ### `modular/style` <small>[(source)](./style.js)</small>
 This module contains code-styling and consistency rules, such as [single-quotes](http://eslint.org/docs/rules/quotes), [two-space indentation](http://eslint.org/docs/rules/indent), and [semi-colons](http://eslint.org/docs/rules/semi).  Obviously, the rules in this module are entirely subjective and reflect my personal preferences. You are free to override or extend these rules as you desire, or not use this module at all.
