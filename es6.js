@@ -5,10 +5,8 @@ module.exports = {
     es6: true,
   },
 
-  parser: 'babel-eslint',
-
   parserOptions: {
-    ecmaVersion: 7,
+    ecmaVersion: 8,
     sourceType: 'module',
     ecmaFeatures: {
       experimentalObjectRestSpread: true,
