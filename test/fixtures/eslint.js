@@ -1,13 +1,13 @@
 'use strict';
 
-var CLIEngine = require('eslint').CLIEngine;
+const CLIEngine = require('eslint').CLIEngine;
 
 /**
  * Runs ESLint on the specified code, using the specified modules.
  */
 exports.run = function (modules, code) {
   // Configure ESLint to use the specified modules
-  var cli = new CLIEngine({
+  let cli = new CLIEngine({
     useEslintrc: false,
     baseConfig: {
       extends: modules,
@@ -15,10 +15,10 @@ exports.run = function (modules, code) {
   });
 
   // Run ESLint on the code
-  var report = cli.executeOnText(code);
+  let report = cli.executeOnText(code);
 
   // Determine which rules were violated
-  var results = report.results[0];
+  let results = report.results[0];
   results.rules = results.messages.map(function (msg) {
     return msg.ruleId;
   });

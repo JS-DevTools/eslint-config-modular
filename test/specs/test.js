@@ -1,12 +1,12 @@
 'use strict';
 
-var ESLint = require('../fixtures/eslint');
-var chai = require('chai');
+const ESLint = require('../fixtures/eslint');
+const chai = require('chai');
 chai.should();
 
 describe('test', function () {
   it('should not be enforced if module is not used', function () {
-    var results = ESLint.run('modular/style',
+    let results = ESLint.run('modular/style',
       'expect(true).to.be.true;\n'
     );
     results.errorCount.should.equal(1);
@@ -14,7 +14,7 @@ describe('test', function () {
   });
 
   it('should allow Mocha globals', function () {
-    var results = ESLint.run(
+    let results = ESLint.run(
       [
         'modular/best-practices',  // This module disallows undefined globals
         'modular/test'             // This module defines Mocha globals
@@ -29,7 +29,7 @@ describe('test', function () {
   });
 
   it('should allow Chai.js property syntax', function () {
-    var results = ESLint.run(
+    let results = ESLint.run(
       [
         'modular/style',        // This module disallows unused expressions
         'modular/test'          // This module allows unused expressions

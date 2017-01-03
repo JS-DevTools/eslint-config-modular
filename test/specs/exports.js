@@ -1,12 +1,12 @@
 'use strict';
 
-var chai = require('chai');
-var expect = chai.expect;
+const chai = require('chai');
+let expect = chai.expect;
 chai.should();
 
 describe('Module exports', function () {
   describe('index', function () {
-    var index = require('../../');
+    const index = require('../../');
 
     it('should be an object', function () {
       expect(index).to.be.an('object');
@@ -22,9 +22,9 @@ describe('Module exports', function () {
     });
   });
 
-  var modules = ['best-practices', 'browser', 'es5', 'es6', 'jsx', 'node', 'style', 'test'];
+  let modules = ['best-practices', 'browser', 'es5', 'es6', 'jsx', 'node', 'style', 'test'];
   modules.forEach(function (moduleName) {
-    var module = require('../../' + moduleName);
+    const module = require('../../' + moduleName);
 
     describe(moduleName, function () {
       it('should be an object', function () {
@@ -36,15 +36,15 @@ describe('Module exports', function () {
       });
 
       it('should contain rules in alphabetical order', function () {
-        var rules = Object.keys(module.rules);
-        var sortedRules = rules.slice().sort();
+        let rules = Object.keys(module.rules);
+        let sortedRules = rules.slice().sort();
         rules.should.deep.equal(sortedRules);
       });
 
       it('should have valid settings for each rule', function () {
         Object.keys(module.rules).forEach(function (ruleName) {
-          var rule = module.rules[ruleName];
-          var level = Array.isArray(rule) ? rule[0] : rule;
+          let rule = module.rules[ruleName];
+          let level = Array.isArray(rule) ? rule[0] : rule;
 
           expect(level).to.be.a('string');
           expect(level).to.be.oneOf(['off', 'warn', 'error'], ruleName);
