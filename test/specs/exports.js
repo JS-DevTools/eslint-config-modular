@@ -34,6 +34,10 @@ describe('Module exports', function () {
     const rules = Object.keys(module.rules || {});
 
     describe(moduleName, function () {
+      it('should be included in the package.json file', () => {
+        expect(manifest.files).to.include(moduleName);
+      });
+
       it('should export an object', function () {
         expect(module).to.be.an('object');
       });
