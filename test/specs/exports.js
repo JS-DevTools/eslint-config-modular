@@ -1,8 +1,15 @@
 'use strict';
 
+const fs = require('fs');
+const path = require('path');
 const chai = require('chai');
-let expect = chai.expect;
+const manifest = require('../../package.json');
+
+const expect = chai.expect;
 chai.should();
+
+const modules = fs.readdirSync(path.resolve(__dirname, '../..'))
+  .filter(filename => filename.substr(-3) === '.js');
 
 describe('Module exports', function () {
   describe('index', function () {
@@ -22,34 +29,33 @@ describe('Module exports', function () {
     });
   });
 
-  let modules = ['best-practices', 'browser', 'es5', 'es6', 'jsx', 'node', 'style', 'test'];
-  modules.forEach(function (moduleName) {
+  for (let moduleName of modules) {
     const module = require('../../' + moduleName);
+    const rules = Object.keys(module.rules || {});
 
     describe(moduleName, function () {
-      it('should be an object', function () {
+      it('should export an object', function () {
         expect(module).to.be.an('object');
       });
 
       it('should only contain valid ESLint settings', function () {
-        module.should.contain.any.keys('env', 'rules', 'parser', 'parserOptions');
+        module.should.contain.any.keys('extends', 'env', 'rules', 'parser', 'parserOptions');
       });
 
       it('should contain rules in alphabetical order', function () {
-        let rules = Object.keys(module.rules);
         let sortedRules = rules.slice().sort();
         rules.should.deep.equal(sortedRules);
       });
 
       it('should have valid settings for each rule', function () {
-        Object.keys(module.rules).forEach(function (ruleName) {
+        for (let ruleName of rules) {
           let rule = module.rules[ruleName];
           let level = Array.isArray(rule) ? rule[0] : rule;
 
           expect(level).to.be.a('string');
           expect(level).to.be.oneOf(['off', 'warn', 'error'], ruleName);
-        });
+        }
       });
     });
-  });
+  }
 });
