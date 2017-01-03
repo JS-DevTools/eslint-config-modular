@@ -36,8 +36,10 @@
   "files": [
     "best-practices.js",
     "browser.js",
+    "common-js.js",
     "es5.js",
     "es6.js",
+    "es6-modules.js",
     "index.js",
     "jsx.js",
     "node.js",
