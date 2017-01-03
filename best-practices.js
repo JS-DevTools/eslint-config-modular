@@ -173,6 +173,18 @@ module.exports = {
     // disallow throwing non-Error objects
     'no-throw-literal': 'error',
 
+    // disallow use of undeclared variables unless mentioned in a /*global */ block
+    'no-undef': 'error',
+
+    // disallow declaration of variables that are not used in the code
+    'no-unused-vars': [
+      'error',
+      {
+        vars: 'all',                // check "all" variables (as opposed to just "local" variables)
+        args: 'after-used',         // check any arguments that come "after-used" arguments
+      },
+    ],
+
     // disallow use of void operator
     'no-void': 'error',
 

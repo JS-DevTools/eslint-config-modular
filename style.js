@@ -107,9 +107,6 @@ module.exports = {
     // disallow trailing whitespace at the end of lines
     'no-trailing-spaces': 'error',
 
-    // disallow use of undeclared variables unless mentioned in a /*global */ block
-    'no-undef': 'error',
-
     // disallow use of undefined when initializing variables
     'no-undef-init': 'error',
 
@@ -128,15 +125,6 @@ module.exports = {
       {
         allowShortCircuit: true,   // allow short-circuited expressions (e.g. foo && bar())
         allowTernary: true,        // allow ternary expressions (e.g. foo ? bar() : baz())
-      },
-    ],
-
-    // disallow declaration of variables that are not used in the code
-    'no-unused-vars': [
-      'error',
-      {
-        vars: 'all',                // check "all" variables (as opposed to just "local" variables)
-        args: 'after-used',         // check any arguments that come "after-used" arguments
       },
     ],
 
