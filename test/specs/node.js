@@ -16,8 +16,8 @@ describe('node', function () {
     var results = ESLint.run('modular/node',
       "var foo = new require(__dirname + '/some-module');"
     );
-    results.errorCount.should.equal(2);
-    results.rules.should.have.members(['no-path-concat', 'no-new-require']);
+    results.errorCount.should.equal(3);
+    results.rules.should.deep.equal(['strict', 'no-new-require', 'no-path-concat']);
   });
 });
 

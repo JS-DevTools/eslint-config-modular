@@ -6,7 +6,7 @@ chai.should();
 
 describe('es6', function () {
   it('should not be enforced if module is not used', function () {
-    var results = ESLint.run('modular/node',
+    var results = ESLint.run('modular/browser',
       'var foo = 5;\n' +
       'var bar = { foo: foo };'
     );
@@ -20,7 +20,7 @@ describe('es6', function () {
     );
     results.errorCount.should.equal(1);
     results.warningCount.should.equal(1);
-    results.rules.should.have.members(['no-var', 'object-shorthand']);
+    results.rules.should.deep.equal(['no-var', 'object-shorthand']);
   });
 });
 

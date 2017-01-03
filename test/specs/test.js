@@ -11,7 +11,7 @@ describe('test', function () {
       'expect(foo).to.be.true;\n'
     );
     results.errorCount.should.equal(2);
-    results.rules.should.have.members(['no-undef', 'no-unused-expressions']);
+    results.rules.should.deep.equal(['no-unused-expressions', 'no-undef']);
   });
 
   it('should be enforced if module is used', function () {

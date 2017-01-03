@@ -18,7 +18,7 @@ describe('jsx', function () {
       "let foo = <div className='some-class'>hello, world</div>;"
     );
     results.errorCount.should.equal(1);
-    results.rules.should.have.members(['jsx-quotes']);
+    results.rules.should.deep.equal(['jsx-quotes']);
   });
 });
 

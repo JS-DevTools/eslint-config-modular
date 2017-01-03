@@ -23,7 +23,7 @@ describe('ESLint', function () {
     var results = ESLint.run('modular', 'var foo = "hello, world"');
 
     results.errorCount.should.equal(5);
-    results.rules.should.have.members([
+    results.rules.should.deep.equal([
       'strict', 'no-unused-vars', 'quotes', 'eol-last', 'semi'
     ]);
   });

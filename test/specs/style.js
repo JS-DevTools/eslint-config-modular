@@ -6,7 +6,7 @@ chai.should();
 
 describe('style', function () {
   it('should not be enforced if module is not used', function () {
-    var results = ESLint.run('modular/node',
+    var results = ESLint.run('modular/browser',
       'var My_Variable = "hello, world"'
     );
     results.errorCount.should.equal(0);
@@ -17,8 +17,8 @@ describe('style', function () {
       'var My_Variable = "hello, world"'
     );
     results.errorCount.should.equal(5);
-    results.rules.should.have.members([
-      'camelcase', 'no-unused-vars', 'quotes', 'semi', 'eol-last'
+    results.rules.should.deep.equal([
+      'camelcase', 'no-unused-vars', 'quotes', 'eol-last', 'semi'
     ]);
   });
 });
