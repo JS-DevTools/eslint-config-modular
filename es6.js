@@ -1,13 +1,14 @@
 'use strict';
 
 module.exports = {
+  extends: 'modular/es6-modules',
+
   env: {
     es6: true,
   },
 
   parserOptions: {
     ecmaVersion: 8,
-    sourceType: 'module',
     ecmaFeatures: {
       experimentalObjectRestSpread: true,
     },

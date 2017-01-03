@@ -1,6 +1,8 @@
 'use strict';
 
 module.exports = {
+  extends: 'modular/common-js',
+
   env: {
     es6: false,
   },
@@ -9,10 +11,6 @@ module.exports = {
 
   parserOptions: {
     ecmaVersion: 5,
-    sourceType: 'script',
-    ecmaFeatures: {
-      impliedStrict: false,
-    },
   },
 
   rules: {
@@ -26,12 +24,5 @@ module.exports = {
     'prefer-arrow-callback': 'off',
     'prefer-spread': 'off',
     'prefer-template': 'off',
-
-    // Require the "use strict" pragma at the global level
-    // (CommonJS, Rollup, Browserify, etc. wrap code in an IIFE)
-    strict: [
-      'error',
-      'global',
-    ],
   }
 };

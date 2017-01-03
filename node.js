@@ -1,6 +1,8 @@
 'use strict';
 
 module.exports = {
+  extends: 'modular/common-js',
+
   env: {
     node: true,
   },
@@ -11,6 +13,5 @@ module.exports = {
 
     // disallow string concatenation with __dirname and __filename
     'no-path-concat': 'error',
-
   }
 };
