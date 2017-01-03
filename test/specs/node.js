@@ -12,12 +12,28 @@ describe('node', function () {
     results.errorCount.should.equal(0);
   });
 
-  it('should be enforced if module is used', function () {
+  it('should require the "use strict" pragma', function () {
+    var results = ESLint.run('modular/node', 'var foo = 5;');
+    results.errorCount.should.equal(1);
+    results.rules.should.deep.equal(['strict']);
+  });
+
+  it('should not allow `new require()` syntax', function () {
     var results = ESLint.run('modular/node',
-      "var foo = new require(__dirname + '/some-module');"
+      "'use strict';\n" +
+      "var foo = new require('some-module');\n"
     );
-    results.errorCount.should.equal(3);
-    results.rules.should.deep.equal(['strict', 'no-new-require', 'no-path-concat']);
+    results.errorCount.should.equal(1);
+    results.rules.should.deep.equal(['no-new-require']);
+  });
+
+  it('should not allow string concatenation with __dirname', function () {
+    var results = ESLint.run('modular/node',
+      "'use strict';\n" +
+      "var foo = __dirname + '/some-file';\n"
+    );
+    results.errorCount.should.equal(1);
+    results.rules.should.deep.equal(['no-path-concat']);
   });
 });
 

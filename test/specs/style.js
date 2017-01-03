@@ -12,14 +12,36 @@ describe('style', function () {
     results.errorCount.should.equal(0);
   });
 
-  it('should be enforced if module is used', function () {
+  it('should require camel-case variable names', function () {
     var results = ESLint.run('modular/style',
-      'var My_Variable = "hello, world"'
+      "var My_Variable = 'hello, world';\n"
     );
-    results.errorCount.should.equal(5);
-    results.rules.should.deep.equal([
-      'camelcase', 'no-unused-vars', 'quotes', 'eol-last', 'semi'
-    ]);
+    results.errorCount.should.equal(1);
+    results.rules.should.deep.equal(['camelcase']);
+  });
+
+  it('should require single quotes for strings', function () {
+    var results = ESLint.run('modular/style',
+      'var myVariable = "hello, world";\n'
+    );
+    results.errorCount.should.equal(1);
+    results.rules.should.deep.equal(['quotes']);
+  });
+
+  it('should require semi-colons', function () {
+    var results = ESLint.run('modular/style',
+      "var myVariable = 'hello, world'\n"
+    );
+    results.errorCount.should.equal(1);
+    results.rules.should.deep.equal(['semi']);
+  });
+
+  it('should require a newline at the end of the file', function () {
+    var results = ESLint.run('modular/style',
+      "var myVariable = 'hello, world';"
+    );
+    results.errorCount.should.equal(1);
+    results.rules.should.deep.equal(['eol-last']);
   });
 });
 

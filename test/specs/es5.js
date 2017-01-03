@@ -10,7 +10,7 @@ describe('es5', function () {
     results.errorCount.should.equal(0);
   });
 
-  it('should be enforced if module is used', function () {
+  it('should require the "use strict" pragma', function () {
     var results = ESLint.run('modular/es5', 'var foo = 5;');
     results.errorCount.should.equal(1);
     results.rules.should.deep.equal(['strict']);

@@ -13,7 +13,7 @@ describe('jsx', function () {
     results.messages[0].message.should.equal('Parsing error: Unexpected token <');
   });
 
-  it('should be enforced if module is used', function () {
+  it('should require double quotes for JSX attributes', function () {
     var results = ESLint.run(['modular/es6', 'modular/jsx'],
       "let foo = <div className='some-class'>hello, world</div>;"
     );

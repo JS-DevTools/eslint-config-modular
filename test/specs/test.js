@@ -7,17 +7,35 @@ chai.should();
 describe('test', function () {
   it('should not be enforced if module is not used', function () {
     var results = ESLint.run('modular/style',
-      'var foo = true;\n' +
-      'expect(foo).to.be.true;\n'
+      'expect(true).to.be.true;\n'
     );
-    results.errorCount.should.equal(2);
-    results.rules.should.deep.equal(['no-unused-expressions', 'no-undef']);
+    results.errorCount.should.equal(1);
+    results.rules.should.deep.equal(['no-unused-expressions']);
   });
 
-  it('should be enforced if module is used', function () {
-    var results = ESLint.run(['modular/style', 'modular/test'],
-      'var foo = true;\n' +
-      'expect(foo).to.be.true;\n'
+  it('should allow Mocha globals', function () {
+    var results = ESLint.run(
+      [
+        'modular/best-practices',  // This module disallows undefined globals
+        'modular/test'             // This module defines Mocha globals
+      ],
+
+      'beforeEach();\n' +
+      'afterEach();\n' +
+      'describe();\n' +
+      'it();\n'
+    );
+    results.errorCount.should.equal(0);
+  });
+
+  it('should allow Chai.js property syntax', function () {
+    var results = ESLint.run(
+      [
+        'modular/style',        // This module disallows unused expressions
+        'modular/test'          // This module allows unused expressions
+      ],
+
+      'expect(true).to.be.true;\n'
     );
     results.errorCount.should.equal(0);
   });
