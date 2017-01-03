@@ -59,6 +59,16 @@ This module configures ESLint to parse EcmaScript 5 code. It also disables ES6-s
 ### `modular/es6` <small>[(source)](./es6.js)</small>
 This module configures ESLint to parse EcmaScript 6 (and newer) code. It also contains ES6-specific rules, such as [not assigning to constants](http://eslint.org/docs/rules/no-const-assign), [calling `super()` in constructors](http://eslint.org/docs/rules/no-this-before-super), and [using `let` instead of `var`](http://eslint.org/docs/rules/no-var).
 
+### `modular/es6-modules` <small>[(source)](./es6-modules.js)</small>
+This module configures ESLint to parse your JavaScript files with [ES6 module semantics](http://www.ecma-international.org/ecma-262/6.0/#sec-module-semantics) rather than [script semantics](http://www.ecma-international.org/ecma-262/6.0/#sec-scripts-static-semantics-early-errors).  It also disallows [the `use strict` directive](http://www.ecma-international.org/ecma-262/6.0/#sec-directive-prologues-and-the-use-strict-directive), since ES6 modules are always strict.
+
+> **Note:** This module is included by the "modular/es6" module, so you usually don't need to include it yourself
+
+### `modular/common-js` <small>[(source)](./common-js.js)</small>
+This module configures ESLint to parse your JavaScript files with [script semantics](http://www.ecma-international.org/ecma-262/6.0/#sec-scripts-static-semantics-early-errors) rather than [ES6 module semantics](http://www.ecma-international.org/ecma-262/6.0/#sec-module-semantics), since CommonJS modules are not "true" JavaScript modules.  It also requires [the `use strict` directive](http://www.ecma-international.org/ecma-262/6.0/#sec-directive-prologues-and-the-use-strict-directive) so that your CommonJS module is parsed in strict mode.
+
+> **Note:** This module is included by the "modular/node" and "modular/es5" modules, so you usually don't need to include it yourself
+
 ### `modular/jsx` <small>[(source)](./jsx.js)</small>
 This module configures ESLint to parse [JSX syntax](https://facebook.github.io/react/docs/jsx-in-depth.html). It also contains JSX-specific rules, such as enforcing the use of [double-quotes in JSX attributes](http://eslint.org/docs/rules/jsx-quotes).
 
@@ -68,5 +78,5 @@ This module contains code-styling and consistency rules, such as [single-quotes]
 ### `modular/test` <small>[(source)](./test.js)</small>
 This module configures ESLint to recognize globals that are defined by common test frameworks, such as `describe`, `it`, `beforeEach`, `assert`, `expect`, etc.  It also disables rules that tend to cause problems with certain test frameworks.
 
-> Note: I recommend that you create a separate `.eslintrc.yml` file in your test folder. That way, it can use different modules and rules than the rest of your codebase.
+> **Note:** I recommend that you create a separate `.eslintrc.yml` file in your test folder. That way, it can use different modules and rules than the rest of your codebase.
 
