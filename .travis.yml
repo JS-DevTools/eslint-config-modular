@@ -18,5 +18,4 @@ before_script:
   - npm link eslint-config-modular
 
 script:
-  - npm run lint
   - npm test
