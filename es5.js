@@ -1,8 +1,6 @@
 'use strict';
 
 module.exports = {
-  extends: 'modular/common-js',
-
   env: {
     es6: false,
   },

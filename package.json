@@ -32,6 +32,11 @@
     "url": "http://jamesmessinger.com"
   },
   "homepage": "https://github.com/BigstickCarpet/eslint-config-modular",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BigstickCarpet/eslint-config-modular.git"
+  },
+  "license": "MIT",
   "main": "index.js",
   "files": [
     "best-practices.js",
@@ -52,11 +57,6 @@
     "upgrade": "npm-check -u",
     "bump": "bump --prompt --tag --push --all",
     "release": "npm run upgrade && npm test && npm run bump && npm publish"
-  },
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/BigstickCarpet/eslint-config-modular.git"
   },
   "devDependencies": {
     "babel-eslint": "^7.1.1",

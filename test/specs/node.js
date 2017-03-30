@@ -12,28 +12,24 @@ describe('node', function () {
     results.errorCount.should.equal(0);
   });
 
-  it('should require the "use strict" pragma', function () {
-    let results = ESLint.run('modular/node', 'var foo = 5;');
+  it('should require the "use strict" pragma at the global level', function () {
+    let results = ESLint.run(
+      ['modular/best-practices', 'modular/node'],
+      'var foo = 5; console.log(foo);'
+    );
     results.errorCount.should.equal(1);
     results.rules.should.deep.equal(['strict']);
+    results.messages[0].message.should.equal("Use the global form of 'use strict'.");
   });
 
-  it('should not allow the "use strict" pragma if followed by the "es6" module', function () {
+  it('should not allow the "use strict" pragma if followed by the "es6-modules" module', function () {
     let results = ESLint.run(
-      ['modular/node', 'modular/es6'],
+      ['modular/best-practices', 'modular/node', 'modular/es6-modules'],
       '"use strict";'
     );
     results.errorCount.should.equal(1);
     results.rules.should.deep.equal(['strict']);
     results.messages[0].message.should.equal("'use strict' is unnecessary inside of modules.");
-  });
-
-  it('should allow the "use strict" pragma if followed by the "es6" and "common-js" modules', function () {
-    let results = ESLint.run(
-      ['modular/node', 'modular/es6', 'modular/common-js'],
-      '"use strict";'
-    );
-    results.errorCount.should.equal(0);
   });
 
   it('should not allow ES6 module syntax', function () {
@@ -43,9 +39,9 @@ describe('node', function () {
     results.messages[0].message.should.equal("Parsing error: The keyword 'import' is reserved");
   });
 
-  it('should allow ES6 module syntax if followed by the "es6" module', function () {
+  it('should allow ES6 module syntax if followed by the "es6-modules" module', function () {
     let results = ESLint.run(
-      ['modular/node', 'modular/es6'],
+      ['modular/node', 'modular/es6-modules'],
       "import foo from 'bar';"
     );
     results.errorCount.should.equal(0);

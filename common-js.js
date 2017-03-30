@@ -8,12 +8,10 @@ module.exports = {
     },
   },
 
+  env: {
+    commonjs: true,
+  },
+
   rules: {
-    // Require the "use strict" pragma at the global level,
-    // since CommonJS modules are wrapped in an IIFE
-    strict: [
-      'error',
-      'global',
-    ],
   }
 };

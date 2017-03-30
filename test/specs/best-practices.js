@@ -15,5 +15,19 @@ describe('best-practices', function () {
     results.errorCount.should.equal(1);
     results.rules.should.deep.equal(['eqeqeq']);
   });
+
+  it('should require the "use strict" pragma at the function level by default', function () {
+    let results = ESLint.run('modular/best-practices', 'function foo () {} foo();');
+    results.errorCount.should.equal(1);
+    results.rules.should.deep.equal(['strict']);
+    results.messages[0].message.should.equal("Use the function form of 'use strict'.");
+  });
+
+  it('should require the "use strict" pragma at the global level for CommonJS', function () {
+    let results = ESLint.run(['modular/best-practices', 'modular/common-js'], 'function foo () {} foo();');
+    results.errorCount.should.equal(1);
+    results.rules.should.deep.equal(['strict']);
+    results.messages[0].message.should.equal("Use the global form of 'use strict'.");
+  });
 });
 

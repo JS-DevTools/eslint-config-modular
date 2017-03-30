@@ -9,10 +9,11 @@ describe('ESLint', function () {
   // which means that all of our modules are syntactically valid
   it('should run without errors', function () {
     let results = ESLint.run('modular',
-      "'use strict';\n" +
       'var foo = 1;\n' +
-      'function bar () {}\n' +
-      'bar(foo);\n'
+      'bar(foo);\n' +
+      'function bar () {\n' +
+      "  'use strict';\n" +
+      '}\n'
     );
 
     results.errorCount.should.equal(0);
@@ -22,9 +23,9 @@ describe('ESLint', function () {
   it('should report errors for rule violations', function () {
     let results = ESLint.run('modular', 'var foo = "hello, world"');
 
-    results.errorCount.should.equal(5);
+    results.errorCount.should.equal(4);
     results.rules.should.deep.equal([
-      'strict', 'no-unused-vars', 'quotes', 'eol-last', 'semi'
+      'no-unused-vars', 'quotes', 'eol-last', 'semi'
     ]);
   });
 });

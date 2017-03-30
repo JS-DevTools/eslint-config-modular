@@ -48,13 +48,13 @@ Modules
 This module contains rules that enforce good JavaScript coding practices, such as [avoiding the `eval()` statement](http://eslint.org/docs/rules/no-eval), not [reassigning native objects](http://eslint.org/docs/rules/no-native-reassign), and [using `===` instead of `==`](http://eslint.org/docs/rules/eqeqeq) for comparisons. Most of the rules in this file will raise an error if violated, but some less-severe ones will only raise warnings.
 
 ### `modular/browser` <small>[(source)](./browser.js)</small>
-This module configures ESLint to recognize browser globals, such as `window`, `document`, `navigator`, etc.  It also contains rules that are specific to projects that are intended to run in web browsers, such as [avoiding the `alert()` statement](http://eslint.org/docs/rules/no-alert).
+This module configures ESLint to recognize browser globals, such as `window`, `document`, `navigator`, etc.  It also contains rules that are specific to projects that are intended to run in web browsers, such as [avoiding the `alert()` statement](http://eslint.org/docs/rules/no-alert) and [requiring the `use strict` directive within a function](http://www.ecma-international.org/ecma-262/6.0/#sec-directive-prologues-and-the-use-strict-directive).
 
 ### `modular/node` <small>[(source)](./node.js)</small>
 This module configures ESLint to recognize Node.js globals, such as `process`, `__dirname`, `Buffer`, etc.  It also contains rules that are specific to Node.js projects, such as [avoding `new require()` syntax](http://eslint.org/docs/rules/no-new-require) and [disallowing concatenation with `__dirname`](http://eslint.org/docs/rules/no-path-concat).
 
 ### `modular/es5` <small>[(source)](./es5.js)</small>
-This module configures ESLint to parse EcmaScript 5 code. It also disables ES6-specific rules and enables ES5-specifc rules, such as [requiring the `"use strict"` pragma](http://eslint.org/docs/rules/strict).
+This module configures ESLint to parse EcmaScript 5 code. It also disables ES6-specific rules, such as [using `let` instead of `var`](http://eslint.org/docs/rules/no-var).
 
 ### `modular/es6` <small>[(source)](./es6.js)</small>
 This module configures ESLint to parse EcmaScript 6 (and newer) code. It also contains ES6-specific rules, such as [not assigning to constants](http://eslint.org/docs/rules/no-const-assign), [calling `super()` in constructors](http://eslint.org/docs/rules/no-this-before-super), and [using `let` instead of `var`](http://eslint.org/docs/rules/no-var).
@@ -62,12 +62,8 @@ This module configures ESLint to parse EcmaScript 6 (and newer) code. It also co
 ### `modular/es6-modules` <small>[(source)](./es6-modules.js)</small>
 This module configures ESLint to parse your JavaScript files with [ES6 module semantics](http://www.ecma-international.org/ecma-262/6.0/#sec-module-semantics) rather than [script semantics](http://www.ecma-international.org/ecma-262/6.0/#sec-scripts-static-semantics-early-errors).  It also disallows [the `use strict` directive](http://www.ecma-international.org/ecma-262/6.0/#sec-directive-prologues-and-the-use-strict-directive), since ES6 modules are always strict.
 
-> **Note:** This module is included by the "modular/es6" module, so you usually don't need to include it yourself
-
 ### `modular/common-js` <small>[(source)](./common-js.js)</small>
-This module configures ESLint to parse your JavaScript files with [script semantics](http://www.ecma-international.org/ecma-262/6.0/#sec-scripts-static-semantics-early-errors) rather than [ES6 module semantics](http://www.ecma-international.org/ecma-262/6.0/#sec-module-semantics), since CommonJS modules are not "true" JavaScript modules.  It also requires [the `use strict` directive](http://www.ecma-international.org/ecma-262/6.0/#sec-directive-prologues-and-the-use-strict-directive) so that your CommonJS module is parsed in strict mode.
-
-> **Note:** This module is included by the "modular/node" and "modular/es5" modules, so you usually don't need to include it yourself
+This module configures ESLint to parse your JavaScript files with [script semantics](http://www.ecma-international.org/ecma-262/6.0/#sec-scripts-static-semantics-early-errors) rather than [ES6 module semantics](http://www.ecma-international.org/ecma-262/6.0/#sec-module-semantics), since CommonJS modules are not "true" JavaScript modules.
 
 ### `modular/jsx` <small>[(source)](./jsx.js)</small>
 This module configures ESLint to parse [JSX syntax](https://facebook.github.io/react/docs/jsx-in-depth.html). It also contains JSX-specific rules, such as enforcing the use of [double-quotes in JSX attributes](http://eslint.org/docs/rules/jsx-quotes).

@@ -194,6 +194,13 @@ module.exports = {
     // require assignment operator shorthand where possible
     'operator-assignment': 'error',
 
+    // Require the "use strict" pragma, either at the global level or function level,
+    // depending on whether CommonJS is being used or not
+    strict: [
+      'error',
+      'safe',
+    ],
+
     // disallow comparisons with the value NaN
     'use-isnan': 'error',
 
