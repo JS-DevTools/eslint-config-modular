@@ -102,7 +102,12 @@ module.exports = {
     'no-mixed-spaces-and-tabs': 'error',
 
     // disallow use of multiple spaces
-    'no-multi-spaces': 'error',
+    'no-multi-spaces': [
+      'error',
+      {
+        ignoreEOLComments: true,    // allow multiple spaces before end-of-line comments (like this one!)
+      }
+    ],
 
     // disallow trailing whitespace at the end of lines
     'no-trailing-spaces': 'error',
