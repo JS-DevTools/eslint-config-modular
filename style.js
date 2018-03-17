@@ -89,12 +89,6 @@ module.exports = {
     // require a space before and after keywords
     'keyword-spacing': 'error',
 
-    // require unix line endings (LF)
-    'linebreak-style': [
-      'error',
-      'unix',
-    ],
-
     // disallow irregular whitespace outside of strings and comments
     'no-irregular-whitespace': 'error',
 
