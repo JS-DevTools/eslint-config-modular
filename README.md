@@ -1,9 +1,9 @@
 Modular ESLint Configuration
 =======================
 
-[![Build Status](https://api.travis-ci.org/BigstickCarpet/eslint-config-modular.svg?branch=master)](https://travis-ci.org/BigstickCarpet/eslint-config-modular)
-[![Windows Build Status](https://ci.appveyor.com/api/projects/status/github/bigstickcarpet/eslint-config-modular?svg=true&branch=master&failingText=Windows%20build%20failing&passingText=Windows%20build%20passing)](https://ci.appveyor.com/project/BigstickCarpet/eslint-config-modular/branch/master)
-[![Dependencies](https://david-dm.org/BigstickCarpet/eslint-config-modular/dev-status.svg)](https://david-dm.org/BigstickCarpet/eslint-config-modular?type=dev)
+[![Build Status](https://api.travis-ci.org/James-Messinger/eslint-config-modular.svg?branch=master)](https://travis-ci.org/James-Messinger/eslint-config-modular)
+[![Windows Build Status](https://ci.appveyor.com/api/projects/status/github/james-messinger/eslint-config-modular?svg=true&branch=master&failingText=Windows%20build%20failing&passingText=Windows%20build%20passing)](https://ci.appveyor.com/project/BigstickCarpet/eslint-config-modular/branch/master)
+[![Dependencies](https://david-dm.org/James-Messinger/eslint-config-modular/dev-status.svg)](https://david-dm.org/James-Messinger/eslint-config-modular?type=dev)
 
 [![npm](https://img.shields.io/npm/v/eslint-config-modular.svg?maxAge=43200)](https://www.npmjs.com/package/eslint-config-modular)
 [![License](https://img.shields.io/npm/l/eslint-config-modular.svg?maxAge=2592000)](LICENSE)
@@ -75,4 +75,3 @@ This module contains code-styling and consistency rules, such as [single-quotes]
 This module configures ESLint to recognize globals that are defined by common test frameworks, such as `describe`, `it`, `beforeEach`, `assert`, `expect`, etc.  It also disables rules that tend to cause problems with certain test frameworks.
 
 > **Note:** I recommend that you create a separate `.eslintrc.yml` file in your test folder. That way, it can use different modules and rules than the rest of your codebase.
-

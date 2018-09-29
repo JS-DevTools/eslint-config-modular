@@ -29,12 +29,12 @@
   ],
   "author": {
     "name": "James Messinger",
-    "url": "http://bigstickcarpet.com"
+    "url": "https://jamesmessinger.com"
   },
-  "homepage": "https://github.com/BigstickCarpet/eslint-config-modular",
+  "homepage": "https://github.com/James-Messinger/eslint-config-modular",
   "repository": {
     "type": "git",
-    "url": "https://github.com/BigstickCarpet/eslint-config-modular.git"
+    "url": "https://github.com/James-Messinger/eslint-config-modular.git"
   },
   "license": "MIT",
   "main": "index.js",
