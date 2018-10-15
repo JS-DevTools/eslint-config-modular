@@ -14,15 +14,15 @@ describe('style', function () {
 
   it('should require camel-case variable names', function () {
     let results = ESLint.run('modular/style',
-      "var My_Variable = 'hello, world';\n"
+      'var My_Variable = "hello, world";\n'
     );
     results.errorCount.should.equal(1);
     results.rules.should.deep.equal(['camelcase']);
   });
 
-  it('should require single quotes for strings', function () {
+  it('should require double quotes for strings', function () {
     let results = ESLint.run('modular/style',
-      'var myVariable = "hello, world";\n'
+      "var myVariable = 'hello, world';\n"
     );
     results.errorCount.should.equal(1);
     results.rules.should.deep.equal(['quotes']);
@@ -30,7 +30,7 @@ describe('style', function () {
 
   it('should require semi-colons', function () {
     let results = ESLint.run('modular/style',
-      "var myVariable = 'hello, world'\n"
+      'var myVariable = "hello, world"\n'
     );
     results.errorCount.should.equal(1);
     results.rules.should.deep.equal(['semi']);
@@ -38,10 +38,10 @@ describe('style', function () {
 
   it('should require a newline at the end of the file', function () {
     let results = ESLint.run('modular/style',
-      "var myVariable = 'hello, world';"
+      'var myVariable = "hello, world";'
     );
     results.errorCount.should.equal(1);
     results.rules.should.deep.equal(['eol-last']);
   });
-});
 
+});

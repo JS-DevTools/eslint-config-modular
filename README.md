@@ -69,7 +69,7 @@ This module configures ESLint to parse your JavaScript files with [script semant
 This module configures ESLint to parse [JSX syntax](https://facebook.github.io/react/docs/jsx-in-depth.html). It also contains JSX-specific rules, such as enforcing the use of [double-quotes in JSX attributes](http://eslint.org/docs/rules/jsx-quotes).
 
 ### `modular/style` <small>[(source)](./style.js)</small>
-This module contains code-styling and consistency rules, such as [single-quotes](http://eslint.org/docs/rules/quotes), [two-space indentation](http://eslint.org/docs/rules/indent), and [semi-colons](http://eslint.org/docs/rules/semi).  Obviously, the rules in this module are entirely subjective and reflect my personal preferences. You are free to override or extend these rules as you desire, or not use this module at all.
+This module contains code-styling and consistency rules, such as [double-quotes](http://eslint.org/docs/rules/quotes), [two-space indentation](http://eslint.org/docs/rules/indent), and [semi-colons](http://eslint.org/docs/rules/semi).  Obviously, the rules in this module are entirely subjective and reflect my personal preferences. You are free to override or extend these rules as you desire, or not use this module at all.
 
 ### `modular/test` <small>[(source)](./test.js)</small>
 This module configures ESLint to recognize globals that are defined by common test frameworks, such as `describe`, `it`, `beforeEach`, `assert`, `expect`, etc.  It also disables rules that tend to cause problems with certain test frameworks.

@@ -155,7 +155,7 @@ module.exports = {
     // require single quotes for all strings
     quotes: [
       'error',
-      'single',
+      'double',
       'avoid-escape',
     ],
 

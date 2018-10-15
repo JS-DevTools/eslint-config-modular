@@ -6,7 +6,7 @@ chai.should();
 
 describe('browser', function () {
   it('should not be enforced if module is not used', function () {
-    let results = ESLint.run('modular/style', "alert('hello, world');\n");
+    let results = ESLint.run('modular/style', 'alert("hello, world");\n');
     results.errorCount.should.equal(0);
   });
 
@@ -38,4 +38,3 @@ describe('browser', function () {
     results.messages[1].message.should.equal("Use the function form of 'use strict'.");
   });
 });
-
