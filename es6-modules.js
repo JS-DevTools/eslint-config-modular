@@ -1,8 +1,8 @@
-'use strict';
+"use strict";
 
 module.exports = {
   parserOptions: {
-    sourceType: 'module',
+    sourceType: "module",
     ecmaFeatures: {
       impliedStrict: true,
     },
@@ -13,8 +13,8 @@ module.exports = {
     // in strict mode, and the pragma is illegal in combination with some
     // ES6 features (e.g. default values in function parameters)
     strict: [
-      'error',
-      'never',
+      "error",
+      "never",
     ],
   }
 };

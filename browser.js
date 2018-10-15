@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 module.exports = {
   env: {
@@ -7,13 +7,13 @@ module.exports = {
 
   rules: {
     // disallow the use of alert, confirm, and prompt
-    'no-alert': 'warn',
+    "no-alert": "warn",
 
     // Require the "use strict" pragma at the function level,
     // to avoid problems with loose scripts
     strict: [
-      'error',
-      'function',
+      "error",
+      "function",
     ],
   }
 };

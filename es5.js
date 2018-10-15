@@ -1,11 +1,11 @@
-'use strict';
+"use strict";
 
 module.exports = {
   env: {
     es6: false,
   },
 
-  parser: 'espree',
+  parser: "espree",
 
   parserOptions: {
     ecmaVersion: 5,
@@ -13,14 +13,14 @@ module.exports = {
 
   rules: {
     // use `var`, not `let` or `const`
-    'no-var': 'off',
+    "no-var": "off",
 
     // ES5 doesn't support method and property shorthand syntax for object literals
-    'object-shorthand': 'off',
+    "object-shorthand": "off",
 
     // Don't recommend ES6 language features
-    'prefer-arrow-callback': 'off',
-    'prefer-spread': 'off',
-    'prefer-template': 'off',
+    "prefer-arrow-callback": "off",
+    "prefer-spread": "off",
+    "prefer-template": "off",
   }
 };

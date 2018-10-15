@@ -1,8 +1,8 @@
-'use strict';
+"use strict";
 
 module.exports = {
   parserOptions: {
-    sourceType: 'script',
+    sourceType: "script",
     ecmaFeatures: {
       impliedStrict: false,
     },
@@ -16,8 +16,8 @@ module.exports = {
     // Require the "use strict" pragma at the global level,
     // since CommonJS modules are wrapped in a function
     strict: [
-      'error',
-      'global',
+      "error",
+      "global",
     ],
   }
 };

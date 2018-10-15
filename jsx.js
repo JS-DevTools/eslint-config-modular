@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 module.exports = {
   parserOptions: {
@@ -9,9 +9,9 @@ module.exports = {
 
   rules: {
     // require double for JSX attributes
-    'jsx-quotes': [
-      'error',
-      'prefer-double',
+    "jsx-quotes": [
+      "error",
+      "prefer-double",
     ],
 
   }

@@ -1,11 +1,11 @@
-'use strict';
+"use strict";
 
 module.exports = {
   extends: [
-    'modular/best-practices',
-    'modular/style',
-    'modular/browser',
-    'modular/node',
-    'modular/es5',
+    "modular/best-practices",
+    "modular/style",
+    "modular/browser",
+    "modular/node",
+    "modular/es5",
   ],
 };

@@ -1,20 +1,20 @@
-'use strict';
+"use strict";
 
 module.exports = {
   rules: {
     // disallow space inside array square brackets
-    'array-bracket-spacing': 'error',
+    "array-bracket-spacing": "error",
 
     // require space before/after arrow function's arrow
-    'arrow-spacing': 'error',
+    "arrow-spacing": "error",
 
     // require spaces inside of single-line blocks
-    'block-spacing': 'error',
+    "block-spacing": "error",
 
     // enforce one true brace style
-    'brace-style': [
-      'error',
-      'stroustrup',
+    "brace-style": [
+      "error",
+      "stroustrup",
       {
         // allow opening and closing brace to be on the same line
         allowSingleLine: true,
@@ -22,11 +22,11 @@ module.exports = {
     ],
 
     // require camel case names
-    camelcase: 'error',
+    camelcase: "error",
 
     // enforce spacing after comma (but not before)
-    'comma-spacing': [
-      'warn',
+    "comma-spacing": [
+      "warn",
       {
         before: false,
         after: true,
@@ -34,38 +34,38 @@ module.exports = {
     ],
 
     // require commas to be placed at the ends of lines
-    'comma-style': 'error',
+    "comma-style": "error",
 
     // disallow space inside computed property square brackets
-    'computed-property-spacing': 'error',
+    "computed-property-spacing": "error",
 
     // specify curly brace conventions for all control statements
-    curly: 'error',
+    curly: "error",
 
     // specify the placement of dots in multi-line statements
-    'dot-location': [
-      'error',
-      'property',
+    "dot-location": [
+      "error",
+      "property",
     ],
 
     // encourages use of dot notation whenever possible
-    'dot-notation': 'error',
+    "dot-notation": "error",
 
     // enforce newline at the end of file, with no multiple empty lines
-    'eol-last': 'error',
+    "eol-last": "error",
 
     // disallow spaces after the function name in function calls
-    'func-call-spacing': 'error',
+    "func-call-spacing": "error",
 
     // enforce use of function declarations
-    'func-style': [
-      'error',
-      'declaration',
+    "func-style": [
+      "error",
+      "declaration",
     ],
 
     // specify 2-space indentation
     indent: [
-      'error',
+      "error",
       2,                        // 2 spaces
       {
         SwitchCase: 1,          // indent multipler for "switch" "case" statements
@@ -78,8 +78,8 @@ module.exports = {
     ],
 
     // enforces spacing between keys and values in object literal properties
-    'key-spacing': [
-      'error',
+    "key-spacing": [
+      "error",
       {
         beforeColon: false,
         afterColon: true,
@@ -87,40 +87,40 @@ module.exports = {
     ],
 
     // require a space before and after keywords
-    'keyword-spacing': 'error',
+    "keyword-spacing": "error",
 
     // disallow irregular whitespace outside of strings and comments
-    'no-irregular-whitespace': 'error',
+    "no-irregular-whitespace": "error",
 
     // disallow mixed spaces and tabs for indentation
-    'no-mixed-spaces-and-tabs': 'error',
+    "no-mixed-spaces-and-tabs": "error",
 
     // disallow use of multiple spaces
-    'no-multi-spaces': [
-      'error',
+    "no-multi-spaces": [
+      "error",
       {
         ignoreEOLComments: true,    // allow multiple spaces before end-of-line comments (like this one!)
       }
     ],
 
     // disallow trailing whitespace at the end of lines
-    'no-trailing-spaces': 'error',
+    "no-trailing-spaces": "error",
 
     // disallow use of undefined when initializing variables
-    'no-undef-init': 'error',
+    "no-undef-init": "error",
 
     // disallow multi-line statements that could be confused for separte ASI statements
-    'no-unexpected-multiline': 'error',
+    "no-unexpected-multiline": "error",
 
     // disallow the use of ternary operators when a simpler alternative exists
-    'no-unneeded-ternary': 'error',
+    "no-unneeded-ternary": "error",
 
     // disallow unreachable statements after a return, throw, continue, or break statement
-    'no-unreachable': 'warn',
+    "no-unreachable": "warn",
 
     // disallow usage of expressions in statement position
-    'no-unused-expressions': [
-      'error',
+    "no-unused-expressions": [
+      "error",
       {
         allowShortCircuit: true,   // allow short-circuited expressions (e.g. foo && bar())
         allowTernary: true,        // allow ternary expressions (e.g. foo ? bar() : baz())
@@ -128,15 +128,15 @@ module.exports = {
     ],
 
     // disallow unnecessary .call() and .apply()
-    'no-useless-call': 'error',
+    "no-useless-call": "error",
 
     // disallow unnecessary concatenation of string literals
-    'no-useless-concat': 'error',
+    "no-useless-concat": "error",
 
     // require a space around curly braces in object literals
-    'object-curly-spacing': [
-      'error',
-      'always',
+    "object-curly-spacing": [
+      "error",
+      "always",
       {
         arraysInObjects: false,
         objectsInObjects: false
@@ -144,52 +144,52 @@ module.exports = {
     ],
 
     // require linebreaks to be placed after operators
-    'operator-linebreak': 'error',
+    "operator-linebreak": "error",
 
     // disallow quotes around object literal property names
-    'quote-props': [
-      'warn',
-      'as-needed',
+    "quote-props": [
+      "warn",
+      "as-needed",
     ],
 
     // require single quotes for all strings
     quotes: [
-      'error',
-      'double',
-      'avoid-escape',
+      "error",
+      "double",
+      "avoid-escape",
     ],
 
     // require use of semicolons instead of ASI
-    semi: 'error',
+    semi: "error",
 
     // enforce spacing after semicolons
-    'semi-spacing': 'error',
+    "semi-spacing": "error",
 
     // disallow space before blocks
-    'space-before-blocks': 'error',
+    "space-before-blocks": "error",
 
     // require a space between the function name and left paren in function definitions
-    'space-before-function-paren': 'error',
+    "space-before-function-paren": "error",
 
     // disallow spaces inside parentheses
-    'space-in-parens': 'error',
+    "space-in-parens": "error",
 
     // require spaces around operators
-    'space-infix-ops': 'error',
+    "space-infix-ops": "error",
 
     // disallow spaces before/after unary operators
-    'space-unary-ops': 'error',
+    "space-unary-ops": "error",
 
     // require a space at the start of a comment
-    'spaced-comment': [
-      'error',
-      'always',
+    "spaced-comment": [
+      "error",
+      "always",
       {
         line: {
-          exceptions: ['/'],                       // exceptions for line comments
+          exceptions: ["/"],                       // exceptions for line comments
         },
         block: {
-          exceptions: ['*', '!', '-', '=', '+'],   // exceptions for block comments
+          exceptions: ["*", "!", "-", "=", "+"],   // exceptions for block comments
         },
       },
     ],

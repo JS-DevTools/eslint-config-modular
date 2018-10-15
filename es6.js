@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 module.exports = {
   env: {
@@ -11,38 +11,38 @@ module.exports = {
 
   rules: {
     // disallow modifying variables of class declarations
-    'no-class-assign': 'error',
+    "no-class-assign": "error",
 
     // disallow modifying variables that are declared using const
-    'no-const-assign': 'error',
+    "no-const-assign": "error",
 
     // disallow use of constant expressions in conditions
-    'no-constant-condition': 'error',
+    "no-constant-condition": "error",
 
     // disallow duplicate name in class members
-    'no-dupe-class-members': 'error',
+    "no-dupe-class-members": "error",
 
     // disallow template literals in normal strings
-    'no-template-curly-in-string': 'error',
+    "no-template-curly-in-string": "error",
 
     // disallow use of this/super before calling super() in constructors.
-    'no-this-before-super': 'error',
+    "no-this-before-super": "error",
 
     // require let or const instead of var
-    'no-var': 'error',
+    "no-var": "error",
 
     // require method and property shorthand syntax for object literals
-    'object-shorthand': 'warn',
+    "object-shorthand": "warn",
 
     // Use arrow functions instead of anonymous functions for callbacks
-    'prefer-arrow-callback': [
-      'error',
+    "prefer-arrow-callback": [
+      "error",
       {
         allowNamedFunctions: true,     // unless the function is named
       }
     ],
 
     // disallow generator functions that do not have yield
-    'require-yield': 'error',
+    "require-yield": "error",
   }
 };

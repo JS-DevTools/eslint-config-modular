@@ -1,12 +1,12 @@
-'use strict';
+"use strict";
 
-const ESLint = require('../fixtures/eslint');
-const chai = require('chai');
+const ESLint = require("../fixtures/eslint");
+const chai = require("chai");
 chai.should();
 
-describe('node', function () {
-  it('should not be enforced if module is not used', function () {
-    let results = ESLint.run('modular/browser',
+describe("node", function () {
+  it("should not be enforced if module is not used", function () {
+    let results = ESLint.run("modular/browser",
       "var foo = new require(__dirname + '/some-module');"
     );
     results.errorCount.should.equal(0);
@@ -14,26 +14,26 @@ describe('node', function () {
 
   it('should require the "use strict" pragma at the global level', function () {
     let results = ESLint.run(
-      ['modular/best-practices', 'modular/node'],
-      'var foo = 5; console.log(foo);'
+      ["modular/best-practices", "modular/node"],
+      "var foo = 5; console.log(foo);"
     );
     results.errorCount.should.equal(1);
-    results.rules.should.deep.equal(['strict']);
+    results.rules.should.deep.equal(["strict"]);
     results.messages[0].message.should.equal("Use the global form of 'use strict'.");
   });
 
   it('should not allow the "use strict" pragma if followed by the "es6-modules" module', function () {
     let results = ESLint.run(
-      ['modular/best-practices', 'modular/node', 'modular/es6-modules'],
+      ["modular/best-practices", "modular/node", "modular/es6-modules"],
       '"use strict";'
     );
     results.errorCount.should.equal(1);
-    results.rules.should.deep.equal(['strict']);
+    results.rules.should.deep.equal(["strict"]);
     results.messages[0].message.should.equal("'use strict' is unnecessary inside of modules.");
   });
 
-  it('should not allow ES6 module syntax', function () {
-    let results = ESLint.run('modular/node', "import foo from 'bar';");
+  it("should not allow ES6 module syntax", function () {
+    let results = ESLint.run("modular/node", "import foo from 'bar';");
     results.errorCount.should.equal(1);
     results.messages.should.have.lengthOf(1);
     results.messages[0].message.should.equal("Parsing error: The keyword 'import' is reserved");
@@ -41,28 +41,28 @@ describe('node', function () {
 
   it('should allow ES6 module syntax if followed by the "es6-modules" module', function () {
     let results = ESLint.run(
-      ['modular/node', 'modular/es6-modules'],
+      ["modular/node", "modular/es6-modules"],
       "import foo from 'bar';"
     );
     results.errorCount.should.equal(0);
   });
 
-  it('should not allow `new require()` syntax', function () {
-    let results = ESLint.run('modular/node',
+  it("should not allow `new require()` syntax", function () {
+    let results = ESLint.run("modular/node",
       "'use strict';\n" +
       "var foo = new require('some-module');\n"
     );
     results.errorCount.should.equal(1);
-    results.rules.should.deep.equal(['no-new-require']);
+    results.rules.should.deep.equal(["no-new-require"]);
   });
 
-  it('should not allow string concatenation with __dirname', function () {
-    let results = ESLint.run('modular/node',
+  it("should not allow string concatenation with __dirname", function () {
+    let results = ESLint.run("modular/node",
       "'use strict';\n" +
       "var foo = __dirname + '/some-file';\n"
     );
     results.errorCount.should.equal(1);
-    results.rules.should.deep.equal(['no-path-concat']);
+    results.rules.should.deep.equal(["no-path-concat"]);
   });
 });
 

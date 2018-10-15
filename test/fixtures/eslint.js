@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-const CLIEngine = require('eslint').CLIEngine;
+const CLIEngine = require("eslint").CLIEngine;
 
 /**
  * Runs ESLint on the specified code, using the specified modules.

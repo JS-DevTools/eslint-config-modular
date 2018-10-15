@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 module.exports = {
   env: {
@@ -18,9 +18,9 @@ module.exports = {
 
   rules: {
     // Chai.js property syntax erroneously triggers this rule
-    'no-unused-expressions': 'off',
+    "no-unused-expressions": "off",
 
     // Mocha callbacks are bound to the test/hook object
-    'prefer-arrow-callback': 'off',
+    "prefer-arrow-callback": "off",
   }
 };
