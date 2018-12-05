@@ -52,7 +52,7 @@
     "test.js"
   ],
   "scripts": {
-    "lint": "eslint . --fix",
+    "lint": "eslint .",
     "test": "mocha && npm run lint",
     "upgrade": "npm-check -u",
     "bump": "bump --prompt --tag --push --all",
