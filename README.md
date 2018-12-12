@@ -1,7 +1,7 @@
 Modular ESLint Configuration
 =======================
 
-[![Cross-Platform Compatibility](https://jsdevtools.org/img/os-badges.svg)](https://travis-ci.com/JS-DevTools/eslint-config-modular)
+[![Cross-Platform Compatibility](https://jsdevtools.org/img/badges/os-badges.svg)](https://travis-ci.com/JS-DevTools/eslint-config-modular)
 [![Build Status](https://api.travis-ci.com/JS-DevTools/eslint-config-modular.svg?branch=master)](https://travis-ci.com/JS-DevTools/eslint-config-modular)
 
 [![Dependencies](https://david-dm.org/JS-DevTools/eslint-config-modular/dev-status.svg)](https://david-dm.org/JS-DevTools/eslint-config-modular?type=dev)
@@ -76,3 +76,12 @@ This module contains code-styling and consistency rules, such as [double-quotes]
 This module configures ESLint to recognize globals that are defined by common test frameworks, such as `describe`, `it`, `beforeEach`, `assert`, `expect`, etc.  It also disables rules that tend to cause problems with certain test frameworks.
 
 > **Note:** I recommend that you create a separate `.eslintrc.yml` file in your test folder. That way, it can use different modules and rules than the rest of your codebase.
+
+
+Big Thanks To
+--------------------------
+Thanks to these awesome companies for their support of Open Source developers ❤
+
+[![Travis CI](https://jsdevtools.org/img/badges/travis-ci.svg)](https://travis-ci.com)
+[![SauceLabs](https://jsdevtools.org/img/badges/sauce-labs.svg)](https://saucelabs.com)
+[![Coveralls](https://jsdevtools.org/img/badges/coveralls.svg)](https://coveralls.io)
