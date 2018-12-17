@@ -56,7 +56,7 @@
     "test": "mocha && npm run lint",
     "upgrade": "npm-check -u",
     "bump": "bump --prompt --tag --push --all",
-    "release": "npm run upgrade && npm test && npm run bump && npm publish"
+    "release": "npm run upgrade && npm test && npm run bump"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
