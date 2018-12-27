@@ -14,11 +14,10 @@ describe("jsx", function () {
   });
 
   it("should require double quotes for JSX attributes", function () {
-    let results = ESLint.run(["modular/es6", "modular/jsx"],
+    let results = ESLint.run(["modular/es6", "modular/browser/jsx"],
       "let foo = <div className='some-class'>hello, world</div>;"
     );
     results.errorCount.should.equal(1);
     results.rules.should.deep.equal(["jsx-quotes"]);
   });
 });
-

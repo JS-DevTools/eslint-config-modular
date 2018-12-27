@@ -22,9 +22,9 @@ describe("node", function () {
     results.messages[0].message.should.equal("Use the global form of 'use strict'.");
   });
 
-  it('should not allow the "use strict" pragma if followed by the "es6-modules" module', function () {
+  it('should not allow the "use strict" pragma if followed by the "modules/esm" module', function () {
     let results = ESLint.run(
-      ["modular/best-practices", "modular/node", "modular/es6-modules"],
+      ["modular/best-practices", "modular/node", "modular/modules/esm"],
       '"use strict";'
     );
     results.errorCount.should.equal(1);
@@ -39,9 +39,9 @@ describe("node", function () {
     results.messages[0].message.should.equal("Parsing error: The keyword 'import' is reserved");
   });
 
-  it('should allow ES6 module syntax if followed by the "es6-modules" module', function () {
+  it('should allow ES6 module syntax if followed by the "modules/esm" module', function () {
     let results = ESLint.run(
-      ["modular/node", "modular/es6-modules"],
+      ["modular/node", "modular/modules/esm"],
       "import foo from 'bar';"
     );
     results.errorCount.should.equal(0);
@@ -65,4 +65,3 @@ describe("node", function () {
     results.rules.should.deep.equal(["no-path-concat"]);
   });
 });
-

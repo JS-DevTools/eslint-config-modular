@@ -24,7 +24,7 @@ describe("browser", function () {
   });
 
   it('should require the "use strict" pragma at the global level if the CommonJS module is loaded after', function () {
-    let results = ESLint.run(["modular/browser", "modular/common-js"], "function foo () {} foo();");
+    let results = ESLint.run(["modular/browser", "modular/modules/cjs"], "function foo () {} foo();");
     results.errorCount.should.equal(1);
     results.rules.should.deep.equal(["strict"]);
     results.messages[0].message.should.equal("Use the global form of 'use strict'.");

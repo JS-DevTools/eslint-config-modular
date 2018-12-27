@@ -13,7 +13,7 @@ describe("es6", function () {
     results.errorCount.should.equal(0);
   });
 
-  it('should not allow ES6 module syntax unless the "es6-modules" module is also used', function () {
+  it('should not allow ES6 module syntax unless the "modules/esm" module is also used', function () {
     let results = ESLint.run("modular/es6", "import foo from 'bar';");
     results.errorCount.should.equal(1);
     results.messages.should.have.lengthOf(1);
@@ -36,4 +36,3 @@ describe("es6", function () {
     results.rules.should.deep.equal(["object-shorthand"]);
   });
 });
-

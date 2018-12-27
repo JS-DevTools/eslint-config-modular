@@ -24,10 +24,9 @@ describe("best-practices", function () {
   });
 
   it('should require the "use strict" pragma at the global level for CommonJS', function () {
-    let results = ESLint.run(["modular/best-practices", "modular/common-js"], "function foo () {} foo();");
+    let results = ESLint.run(["modular/best-practices", "modular/modules/cjs"], "function foo () {} foo();");
     results.errorCount.should.equal(1);
     results.rules.should.deep.equal(["strict"]);
     results.messages[0].message.should.equal("Use the global form of 'use strict'.");
   });
 });
-
