@@ -39,17 +39,15 @@
   "license": "MIT",
   "main": "index.js",
   "files": [
-    "best-practices.js",
-    "browser.js",
-    "common-js.js",
-    "es5.js",
-    "es6.js",
-    "es6-modules.js",
-    "index.js",
-    "jsx.js",
-    "node.js",
-    "style.js",
-    "test.js"
+    "best-practices",
+    "browser",
+    "es5",
+    "es6",
+    "modules",
+    "node",
+    "style",
+    "test/index.js",
+    "index.js"
   ],
   "scripts": {
     "lint": "eslint .",

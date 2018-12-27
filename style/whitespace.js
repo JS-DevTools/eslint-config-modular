@@ -21,9 +21,6 @@ module.exports = {
       },
     ],
 
-    // require camel case names
-    camelcase: "error",
-
     // enforce spacing after comma (but not before)
     "comma-spacing": [
       "warn",
@@ -39,29 +36,17 @@ module.exports = {
     // disallow space inside computed property square brackets
     "computed-property-spacing": "error",
 
-    // specify curly brace conventions for all control statements
-    curly: "error",
-
     // specify the placement of dots in multi-line statements
     "dot-location": [
       "error",
       "property",
     ],
 
-    // encourages use of dot notation whenever possible
-    "dot-notation": "error",
-
     // enforce newline at the end of file, with no multiple empty lines
     "eol-last": "error",
 
     // disallow spaces after the function name in function calls
     "func-call-spacing": "error",
-
-    // enforce use of function declarations
-    "func-style": [
-      "error",
-      "declaration",
-    ],
 
     // specify 2-space indentation
     indent: [
@@ -106,33 +91,6 @@ module.exports = {
     // disallow trailing whitespace at the end of lines
     "no-trailing-spaces": "error",
 
-    // disallow use of undefined when initializing variables
-    "no-undef-init": "error",
-
-    // disallow multi-line statements that could be confused for separte ASI statements
-    "no-unexpected-multiline": "error",
-
-    // disallow the use of ternary operators when a simpler alternative exists
-    "no-unneeded-ternary": "error",
-
-    // disallow unreachable statements after a return, throw, continue, or break statement
-    "no-unreachable": "warn",
-
-    // disallow usage of expressions in statement position
-    "no-unused-expressions": [
-      "error",
-      {
-        allowShortCircuit: true,   // allow short-circuited expressions (e.g. foo && bar())
-        allowTernary: true,        // allow ternary expressions (e.g. foo ? bar() : baz())
-      },
-    ],
-
-    // disallow unnecessary .call() and .apply()
-    "no-useless-call": "error",
-
-    // disallow unnecessary concatenation of string literals
-    "no-useless-concat": "error",
-
     // require a space around curly braces in object literals
     "object-curly-spacing": [
       "error",
@@ -145,22 +103,6 @@ module.exports = {
 
     // require linebreaks to be placed after operators
     "operator-linebreak": "error",
-
-    // disallow quotes around object literal property names
-    "quote-props": [
-      "warn",
-      "as-needed",
-    ],
-
-    // require single quotes for all strings
-    quotes: [
-      "error",
-      "double",
-      "avoid-escape",
-    ],
-
-    // require use of semicolons instead of ASI
-    semi: "error",
 
     // enforce spacing after semicolons
     "semi-spacing": "error",

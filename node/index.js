@@ -1,7 +1,7 @@
 "use strict";
 
 module.exports = {
-  extends: "modular/common-js",
+  extends: "modular/modules/cjs",
 
   env: {
     node: true,
