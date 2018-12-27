@@ -6,11 +6,11 @@ chai.should();
 
 describe("test", function () {
   it("should not be enforced if module is not used", function () {
-    let results = ESLint.run("modular/style",
+    let results = ESLint.run("modular/best-practices",
       "expect(true).to.be.true;\n"
     );
-    results.errorCount.should.equal(1);
-    results.rules.should.deep.equal(["no-unused-expressions"]);
+    results.errorCount.should.equal(2);
+    results.rules.should.deep.equal(["no-unused-expressions", "no-undef"]);
   });
 
   it("should allow Mocha globals", function () {
@@ -40,4 +40,3 @@ describe("test", function () {
     results.errorCount.should.equal(0);
   });
 });
-

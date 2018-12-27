@@ -1,15 +1,17 @@
 "use strict";
 
-const fs = require("fs");
 const path = require("path");
 const chai = require("chai");
+const glob = require("glob");
 const manifest = require("../../package.json");
 
 const expect = chai.expect;
 chai.should();
 
-const modules = fs.readdirSync(path.resolve(__dirname, "../.."))
-  .filter(filename => filename.substr(-3) === ".js");
+const modules = [].concat(
+  glob.sync("*.js"),
+  glob.sync("*/*.js")
+);
 
 describe("Module exports", function () {
   describe("index", function () {
@@ -35,6 +37,17 @@ describe("Module exports", function () {
 
     describe(moduleName, function () {
       it("should be included in the package.json file", () => {
+        for (let file of manifest.files) {
+          if (file === moduleName) {
+            // This file is explicitly included in the package.json
+            return;
+          }
+          else if (file === path.dirname(moduleName)) {
+            // This file's parent directory is included in the package.json
+            return;
+          }
+        }
+
         expect(manifest.files).to.include(moduleName);
       });
 
