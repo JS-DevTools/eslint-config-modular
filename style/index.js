@@ -1,10 +1,5 @@
 "use strict";
 
-const conventions = require("./conventions");
-const naming = require("./naming");
-const syntax = require("./syntax");
-const whitespace = require("./whitespace");
-
 module.exports = {
   extends: [
     "modular/style/conventions",
