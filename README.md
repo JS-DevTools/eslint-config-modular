@@ -13,6 +13,10 @@ Modular ESLint Configuration
 
 Each module defines rules that are meant to be reasonable defaults and best practices, but you can easily extend or override any of the rules to suit your needs.
 
+Related Projects
+-----------------------
+- [tslint-modular](https://www.npmjs.com/package/tslint-modular) - Modular TSLint configuration for TypeScript projects
+
 Installation
 -----------------------
 Run the following [NPM](https://docs.npmjs.com/getting-started/what-is-npm) command to install [ESLint](https://eslint.org/) and `eslint-config-modular` as dev-dependencies of your project:
