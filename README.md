@@ -52,6 +52,8 @@ rules:
   # You can override or extend any rules here
 ```
 
+
+
 Modules
 -----------------------
 `eslint-config-modular` includes the following modules.  Mix-and-match them as applicable to your project.
@@ -102,7 +104,7 @@ These rules disallow outdated, nonstandard, and confusing syntax.  Examples incl
 This module enforces **opinionated** whitespace rules, such as [two-space indentation](https://eslint.org/docs/rules/indent), [Stroustrup style opening braces](https://eslint.org/docs/rules/brace-style), and [commas at the end of the line](https://eslint.org/docs/rules/comma-style).
 
 ### `modular/test` <small>[(source)](./test/index.js)</small>
-This module configures ESLint to recognize globals that are defined by common test frameworks, such as `describe`, `it`, `beforeEach`, `assert`, `expect`, etc.  It also disables rules that tend to cause problems with certain test frameworks.
+This module configures ESLint to recognize globals that are defined by common test frameworks, such as `describe`, `it`, `beforeEach`, etc.  It also disables rules that tend to cause problems with certain test frameworks.
 
 > **Note:** We recommend that you create a separate `.eslintrc.yml` file in your test folder. That way, it can use different modules and rules than the rest of your codebase.
 
