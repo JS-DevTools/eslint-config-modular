@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-modular",
-  "version": "6.0.0",
+  "version": "7.0.0",
   "description": "Modular ESLint configuration",
   "keywords": [
     "eslintconfig",
