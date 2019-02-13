@@ -9,28 +9,35 @@ Modular ESLint Configuration
 [![npm](https://img.shields.io/npm/v/eslint-config-modular.svg?maxAge=43200)](https://www.npmjs.com/package/eslint-config-modular)
 [![License](https://img.shields.io/npm/l/eslint-config-modular.svg?maxAge=2592000)](LICENSE)
 
-`eslint-config-modular` is a [shareable config](https://eslint.org/docs/developer-guide/shareable-configs) for [ESLint](https://eslint.org/) that's broken-up into different modules that can be mixed-and-matched to match the needs of your project.
+ESLint Modular is a [shareable config](https://eslint.org/docs/developer-guide/shareable-configs) for [ESLint](https://eslint.org/) that's broken-up into different modules that can be mixed-and-matched to match the needs of your project.
 
 Each module defines rules that are meant to be reasonable defaults and best practices, but you can easily extend or override any of the rules to suit your needs.
 
+
+
 Related Projects
 -----------------------
-- [tslint-modular](https://www.npmjs.com/package/tslint-modular) - Modular TSLint configuration for TypeScript projects
+- [tslint-modular](https://jsdevtools.org/tslint-modular/)<br>
+  Modular TSLint configuration for TypeScript projects
+
+
 
 Installation
 -----------------------
-Run the following [NPM](https://docs.npmjs.com/getting-started/what-is-npm) command to install [ESLint](https://eslint.org/) and `eslint-config-modular` as dev-dependencies of your project:
+Run the following [npm](https://docs.npmjs.com/about-npm/) command to install [ESLint](https://eslint.org/) and ESLint Modular as dev-dependencies of your project:
 
 ```bash
 npm install eslint eslint-config-modular --save-dev
 ```
+
+
 
 Usage
 -----------------------
 Shareable configs are designed to work with the `extends` feature of `.eslintrc` files. You can learn more about
 [Shareable Configs](https://eslint.org/docs/developer-guide/shareable-configs) on the official ESLint website.
 
-To use `eslint-config-modular` in your project, create an `.eslintrc.yml` file with the following contents:
+To use ESLint Modular in your project, create an `.eslintrc.yml` file with the following contents:
 
 **.eslintrc.yml**
 ```yaml
@@ -42,7 +49,7 @@ extends:
   - modular/es5
 
 rules:
-  # You can override or extend the rules here
+  # You can override or extend any rules here
 ```
 
 Modules
