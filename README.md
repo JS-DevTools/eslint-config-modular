@@ -1,7 +1,7 @@
 Modular ESLint Configuration
 =======================
 
-[![Cross-Platform Compatibility](https://jsdevtools.org/img/badges/os-badges.svg)](https://travis-ci.com/JS-DevTools/eslint-config-modular)
+[![Cross-Platform Compatibility](https://jstools.dev/img/badges/os-badges.svg)](https://travis-ci.com/JS-DevTools/eslint-config-modular)
 [![Build Status](https://api.travis-ci.com/JS-DevTools/eslint-config-modular.svg?branch=master)](https://travis-ci.com/JS-DevTools/eslint-config-modular)
 
 [![Dependencies](https://david-dm.org/JS-DevTools/eslint-config-modular/dev-status.svg)](https://david-dm.org/JS-DevTools/eslint-config-modular?type=dev)
@@ -17,7 +17,7 @@ Each module defines rules that are meant to be reasonable defaults and best prac
 
 Related Projects
 -----------------------
-- [tslint-modular](https://jsdevtools.org/tslint-modular/)<br>
+- [tslint-modular](https://jstools.dev/tslint-modular/)<br>
   Modular TSLint configuration for TypeScript projects
 
 
@@ -113,6 +113,6 @@ Big Thanks To
 --------------------------
 Thanks to these awesome companies for their support of Open Source developers ❤
 
-[![Travis CI](https://jsdevtools.org/img/badges/travis-ci.svg)](https://travis-ci.com)
-[![SauceLabs](https://jsdevtools.org/img/badges/sauce-labs.svg)](https://saucelabs.com)
-[![Coveralls](https://jsdevtools.org/img/badges/coveralls.svg)](https://coveralls.io)
+[![Travis CI](https://jstools.dev/img/badges/travis-ci.svg)](https://travis-ci.com)
+[![SauceLabs](https://jstools.dev/img/badges/sauce-labs.svg)](https://saucelabs.com)
+[![Coveralls](https://jstools.dev/img/badges/coveralls.svg)](https://coveralls.io)

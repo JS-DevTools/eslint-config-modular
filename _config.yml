@@ -2,7 +2,7 @@ remote_theme: JS-DevTools/gh-pages-theme
 
 title: Modular ESLint configuration
 description: Combine modules to get the right configuration for your project
-logo: https://jsdevtools.org/img/logos/logo.png
+logo: https://jstools.dev/img/logos/logo.png
 
 author:
   twitter: JSDevTools
@@ -17,7 +17,7 @@ defaults:
   - scope:
       path: ""
     values:
-      image: https://jsdevtools.org/img/logos/card.png
+      image: https://jstools.dev/img/logos/card.png
   - scope:
       path: "test/**/*"
     values:
