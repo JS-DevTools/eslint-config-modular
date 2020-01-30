@@ -1,3 +1,0 @@
---bail
-test/fixtures/*.js
-test/specs/*.spec.js
