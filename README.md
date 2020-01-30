@@ -4,6 +4,7 @@ Modular ESLint Configuration
 [![Cross-Platform Compatibility](https://jstools.dev/img/badges/os-badges.svg)](https://github.com/JS-DevTools/eslint-config-modular/blob/master/.github/workflows/CI-CD.yaml)
 [![Build Status](https://github.com/JS-DevTools/eslint-config-modular/workflows/CI-CD/badge.svg)](https://github.com/JS-DevTools/eslint-config-modular/blob/master/.github/workflows/CI-CD.yaml)
 
+[![Coverage Status](https://coveralls.io/repos/github/JS-DevTools/eslint-config-modular/badge.svg?branch=master)](https://coveralls.io/github/JS-DevTools/eslint-config-modular)
 [![Dependencies](https://david-dm.org/JS-DevTools/eslint-config-modular/dev-status.svg)](https://david-dm.org/JS-DevTools/eslint-config-modular?type=dev)
 
 [![npm](https://img.shields.io/npm/v/eslint-config-modular.svg?maxAge=43200)](https://www.npmjs.com/package/eslint-config-modular)
