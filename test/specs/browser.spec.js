@@ -1,6 +1,6 @@
 "use strict";
 
-const ESLint = require("../fixtures/eslint");
+const ESLint = require("../utils/eslint");
 const chai = require("chai");
 chai.should();
 
