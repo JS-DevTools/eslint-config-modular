@@ -1,8 +1,8 @@
 Modular ESLint Configuration
 =======================
 
-[![Cross-Platform Compatibility](https://jstools.dev/img/badges/os-badges.svg)](https://travis-ci.com/JS-DevTools/eslint-config-modular)
-[![Build Status](https://api.travis-ci.com/JS-DevTools/eslint-config-modular.svg?branch=master)](https://travis-ci.com/JS-DevTools/eslint-config-modular)
+[![Cross-Platform Compatibility](https://jstools.dev/img/badges/os-badges.svg)](https://github.com/JS-DevTools/eslint-config-modular/blob/master/.github/workflows/CI-CD.yaml)
+[![Build Status](https://github.com/JS-DevTools/eslint-config-modular/workflows/CI-CD/badge.svg)](https://github.com/JS-DevTools/eslint-config-modular/blob/master/.github/workflows/CI-CD.yaml)
 
 [![Dependencies](https://david-dm.org/JS-DevTools/eslint-config-modular/dev-status.svg)](https://david-dm.org/JS-DevTools/eslint-config-modular?type=dev)
 
