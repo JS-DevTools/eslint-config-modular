@@ -1,0 +1,58 @@
+{
+  "name": "eslint-config-modular",
+  "version": "X.X.X",
+  "description": "Modular ESLint configuration",
+  "keywords": [
+    "eslintconfig",
+    "eslint",
+    "check",
+    "checker",
+    "code",
+    "code checker",
+    "code linter",
+    "code standards",
+    "code style",
+    "enforce",
+    "hint",
+    "jscs",
+    "jshint",
+    "lint",
+    "policy",
+    "quality",
+    "simple",
+    "standard",
+    "standard style",
+    "style",
+    "style checker",
+    "style linter",
+    "verify"
+  ],
+  "author": {
+    "name": "James Messinger",
+    "url": "https://jamesmessinger.com"
+  },
+  "homepage": "https://jstools.dev/eslint-config-modular",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JS-DevTools/eslint-config-modular.git"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "files": [
+    "best-practices",
+    "browser",
+    "es5",
+    "es6",
+    "modules",
+    "node",
+    "style",
+    "test",
+    "index.js"
+  ],
+  "dependencies": {
+    "@jsdevtools/eslint-config-modular": "X.X.X"
+  },
+  "peerDependencies": {
+    "eslint": ">=3.0.0"
+  }
+}
