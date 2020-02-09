@@ -6,7 +6,7 @@ chai.should();
 
 describe("test", function () {
   it("should not be enforced if module is not used", function () {
-    let results = ESLint.run("modular/best-practices",
+    let results = ESLint.run("@jsdevtools/modular/best-practices",
       "expect(true).to.be.true;\n"
     );
     results.errorCount.should.equal(2);
@@ -16,8 +16,8 @@ describe("test", function () {
   it("should allow Mocha globals", function () {
     let results = ESLint.run(
       [
-        "modular/best-practices",  // This module disallows undefined globals
-        "modular/test"             // This module defines Mocha globals
+        "@jsdevtools/modular/best-practices",  // This module disallows undefined globals
+        "@jsdevtools/modular/test"             // This module defines Mocha globals
       ],
 
       "beforeEach();\n" +
@@ -31,8 +31,8 @@ describe("test", function () {
   it("should allow Chai.js property syntax", function () {
     let results = ESLint.run(
       [
-        "modular/style",        // This module disallows unused expressions
-        "modular/test"          // This module allows unused expressions
+        "@jsdevtools/modular/style",        // This module disallows unused expressions
+        "@jsdevtools/modular/test"          // This module allows unused expressions
       ],
 
       "expect(true).to.be.true;\n"

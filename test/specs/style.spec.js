@@ -6,14 +6,14 @@ chai.should();
 
 describe("style", function () {
   it("should not be enforced if module is not used", function () {
-    let results = ESLint.run("modular/browser",
+    let results = ESLint.run("@jsdevtools/modular/browser",
       'var My_Variable = "hello, world"'
     );
     results.errorCount.should.equal(0);
   });
 
   it("should require camel-case variable names", function () {
-    let results = ESLint.run("modular/style",
+    let results = ESLint.run("@jsdevtools/modular/style",
       'var My_Variable = "hello, world";\n'
     );
     results.errorCount.should.equal(1);
@@ -21,7 +21,7 @@ describe("style", function () {
   });
 
   it("should require double quotes for strings", function () {
-    let results = ESLint.run("modular/style",
+    let results = ESLint.run("@jsdevtools/modular/style",
       "var myVariable = 'hello, world';\n"
     );
     results.errorCount.should.equal(1);
@@ -29,7 +29,7 @@ describe("style", function () {
   });
 
   it("should require semi-colons", function () {
-    let results = ESLint.run("modular/style",
+    let results = ESLint.run("@jsdevtools/modular/style",
       'var myVariable = "hello, world"\n'
     );
     results.errorCount.should.equal(1);
@@ -37,7 +37,7 @@ describe("style", function () {
   });
 
   it("should require a newline at the end of the file", function () {
-    let results = ESLint.run("modular/style",
+    let results = ESLint.run("@jsdevtools/modular/style",
       'var myVariable = "hello, world";'
     );
     results.errorCount.should.equal(1);

@@ -6,7 +6,7 @@ chai.should();
 
 describe("modules/esm", function () {
   it("should not be enforced if module is not used", function () {
-    let results = ESLint.run("modular/es6",
+    let results = ESLint.run("@jsdevtools/modular/es6",
       "const foo = 5;\n" +
       "let bar = { foo: foo };"
     );
@@ -14,7 +14,7 @@ describe("modules/esm", function () {
   });
 
   it('should not allow the "use strict" pragma', function () {
-    let results = ESLint.run("modular/modules/esm", '"use strict";');
+    let results = ESLint.run("@jsdevtools/modular/modules/esm", '"use strict";');
     results.errorCount.should.equal(1);
     results.rules.should.deep.equal(["strict"]);
     results.messages[0].message.should.equal("'use strict' is unnecessary inside of modules.");
@@ -22,7 +22,7 @@ describe("modules/esm", function () {
 
   it("should allow ES6 module syntax", function () {
     let results = ESLint.run(
-      ["modular/es6", "modular/modules/esm"],
+      ["@jsdevtools/modular/es6", "@jsdevtools/modular/modules/esm"],
       "import foo from 'bar';"
     );
     results.errorCount.should.equal(0);
@@ -30,7 +30,7 @@ describe("modules/esm", function () {
 
   it('should not allow ES6 module syntax if followed by the "modules/cjs" module', function () {
     let results = ESLint.run(
-      ["modular/es6", "modular/modules/esm", "modular/modules/cjs"],
+      ["@jsdevtools/modular/es6", "@jsdevtools/modular/modules/esm", "@jsdevtools/modular/modules/cjs"],
       "import foo from 'bar';"
     );
     results.errorCount.should.equal(1);

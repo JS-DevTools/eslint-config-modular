@@ -1,5 +1,5 @@
 {
-  "name": "eslint-config-modular",
+  "name": "@jsdevtools/eslint-config-modular",
   "version": "7.0.2",
   "description": "Modular ESLint configuration",
   "keywords": [

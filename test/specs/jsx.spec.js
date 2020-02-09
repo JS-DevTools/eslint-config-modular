@@ -6,7 +6,7 @@ chai.should();
 
 describe("jsx", function () {
   it("should not be enforced if module is not used", function () {
-    let results = ESLint.run("modular/node",
+    let results = ESLint.run("@jsdevtools/modular/node",
       "var foo = <div className='some-class'>hello, world</div>;"
     );
     results.errorCount.should.equal(1);
@@ -14,7 +14,7 @@ describe("jsx", function () {
   });
 
   it("should require double quotes for JSX attributes", function () {
-    let results = ESLint.run(["modular/es6", "modular/browser/jsx"],
+    let results = ESLint.run(["@jsdevtools/modular/es6", "@jsdevtools/modular/browser/jsx"],
       "let foo = <div className='some-class'>hello, world</div>;"
     );
     results.errorCount.should.equal(1);

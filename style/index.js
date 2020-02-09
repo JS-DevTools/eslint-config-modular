@@ -2,9 +2,9 @@
 
 module.exports = {
   extends: [
-    "modular/style/conventions",
-    "modular/style/naming",
-    "modular/style/syntax",
-    "modular/style/whitespace",
+    "@jsdevtools/modular/style/conventions",
+    "@jsdevtools/modular/style/naming",
+    "@jsdevtools/modular/style/syntax",
+    "@jsdevtools/modular/style/whitespace",
   ],
 };

@@ -2,10 +2,10 @@
 
 module.exports = {
   extends: [
-    "modular/best-practices",
-    "modular/style",
-    "modular/browser",
-    "modular/node",
-    "modular/es5",
+    "@jsdevtools/modular/best-practices",
+    "@jsdevtools/modular/style",
+    "@jsdevtools/modular/browser",
+    "@jsdevtools/modular/node",
+    "@jsdevtools/modular/es5",
   ],
 };

@@ -46,7 +46,7 @@ jobs:
       - name: Link eslint-config-modular, so ESLint can find it
         run: |
           npm link
-          npm link eslint-config-modular
+          npm link @jsdevtools/eslint-config-modular
 
       - name: Run linter
         run: npm run lint
