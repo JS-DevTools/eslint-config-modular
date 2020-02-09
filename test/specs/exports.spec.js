@@ -10,7 +10,7 @@ chai.should();
 
 const modules = [].concat(
   glob.sync("*.js"),
-  glob.sync("*/*.js")
+  glob.sync("*/*.js", { ignore: "dist/**" })
 );
 
 describe("Module exports", function () {
