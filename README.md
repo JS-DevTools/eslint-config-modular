@@ -9,7 +9,7 @@ Modular ESLint Configuration
 
 [![npm](https://img.shields.io/npm/v/@jsdevtools/eslint-config-modular.svg)](https://www.npmjs.com/package/@jsdevtools/eslint-config-modular)
 [![License](https://img.shields.io/npm/l/@jsdevtools/eslint-config-modular.svg)](LICENSE)
-[![Buy us a tree](https://img.shields.io/badge/Treeware-%F0%9F%8C%B3-lightgreen)](https://plant.treeware.earth/JS-DevTools/XXXXXXXXXXXXXXXXXXXXXXXXX)
+[![Buy us a tree](https://img.shields.io/badge/Treeware-%F0%9F%8C%B3-lightgreen)](https://plant.treeware.earth/JS-DevTools/eslint-config-modular)
 
 ESLint Modular is a [shareable config](https://eslint.org/docs/developer-guide/shareable-configs) for [ESLint](https://eslint.org/) that's broken-up into different modules that can be mixed-and-matched to match the needs of your project.
 
@@ -109,6 +109,15 @@ This module enforces **opinionated** whitespace rules, such as [two-space indent
 This module configures ESLint to recognize globals that are defined by common test frameworks, such as `describe`, `it`, `beforeEach`, etc.  It also disables rules that tend to cause problems with certain test frameworks.
 
 > **Note:** We recommend that you create a separate `.eslintrc.yml` file in your test folder. That way, it can use different modules and rules than the rest of your codebase.
+
+
+
+License
+--------------------------
+ESLint Config Modular is 100% free and open-source, under the [MIT license](LICENSE). Use it however you want.
+
+This package is [Treeware](http://treeware.earth). If you use it in production, then we ask that you [**buy the world a tree**](https://plant.treeware.earth/JS-DevTools/eslint-config-modular) to thank us for our work. By contributing to the Treeware forest you’ll be creating employment for local families and restoring wildlife habitats.
+
 
 
 Big Thanks To
