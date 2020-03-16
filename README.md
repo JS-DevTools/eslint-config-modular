@@ -7,8 +7,9 @@ Modular ESLint Configuration
 [![Coverage Status](https://coveralls.io/repos/github/JS-DevTools/eslint-config-modular/badge.svg?branch=master)](https://coveralls.io/github/JS-DevTools/eslint-config-modular)
 [![Dependencies](https://david-dm.org/JS-DevTools/eslint-config-modular/dev-status.svg)](https://david-dm.org/JS-DevTools/eslint-config-modular?type=dev)
 
-[![npm](https://img.shields.io/npm/v/@jsdevtools/eslint-config-modular.svg?maxAge=43200)](https://www.npmjs.com/package/@jsdevtools/eslint-config-modular)
-[![License](https://img.shields.io/npm/l/@jsdevtools/eslint-config-modular.svg?maxAge=2592000)](LICENSE)
+[![npm](https://img.shields.io/npm/v/@jsdevtools/eslint-config-modular.svg)](https://www.npmjs.com/package/@jsdevtools/eslint-config-modular)
+[![License](https://img.shields.io/npm/l/@jsdevtools/eslint-config-modular.svg)](LICENSE)
+[![Buy us a tree](https://img.shields.io/badge/Treeware-%F0%9F%8C%B3-lightgreen)](https://plant.treeware.earth/JS-DevTools/XXXXXXXXXXXXXXXXXXXXXXXXX)
 
 ESLint Modular is a [shareable config](https://eslint.org/docs/developer-guide/shareable-configs) for [ESLint](https://eslint.org/) that's broken-up into different modules that can be mixed-and-matched to match the needs of your project.
 
