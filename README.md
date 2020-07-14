@@ -22,6 +22,9 @@ Related Projects
 - [tslint-modular](https://jstools.dev/tslint-modular/)<br>
   Modular TSLint configuration for TypeScript projects
 
+- [@jsdevtools/eslint-config](https://jstools.dev/eslint-config)<br>
+  Opinionated JSDevTools ESLint config for JavaScript, TypeScript, and JSX
+
 
 
 Installation
